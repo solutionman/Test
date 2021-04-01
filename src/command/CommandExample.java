@@ -1,3 +1,5 @@
+package command;
+
 public class CommandExample {
     public interface Command {
         public void execute(Object data);
