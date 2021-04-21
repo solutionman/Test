@@ -16,7 +16,7 @@ public class Main {
         try {
             XMLEventWriter writer =
                     factory.createXMLEventWriter(
-                            new FileWriter("data\\output.xml"));
+                            new FileWriter("output.xml"));
 
             XMLEvent event = eventFactory.createStartDocument();
             writer.add(event);
