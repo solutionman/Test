@@ -16,7 +16,7 @@ class MyThread extends Thread{
     @Override
     public void run(){
         for(int i = 0; i < 1000; i++){
-            System.out.println("thread one");
+            System.out.println("thread one " + i);
         }
     }
 }
@@ -25,7 +25,14 @@ class AnotherThread extends Thread{
     @Override
     public void run(){
         for(int i = 0; i < 1000; i++){
-            System.out.println("thread two");
+            System.out.println("thread two " + i);
+            if(i == 800){
+                try {
+                    sleep(3000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
         }
     }
 }
