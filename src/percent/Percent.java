@@ -1,4 +1,4 @@
-package Percent;
+package percent;
 
 import java.util.ArrayList;
 import java.util.List;
