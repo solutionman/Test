@@ -5,7 +5,8 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) {
 
-        HashSet<String> hs = new HashSet<String>();
+        Object object = new Object();
+        Set<String> hs = new HashSet<>();
         hs.add("John");
         hs.add("Smith");
         hs.add("Peter");
@@ -13,9 +14,13 @@ public class Main {
         hs.add("John");
         hs.add("Smith");
         System.out.println("\nAfter adding duplicate values \n\n" + hs);
+        // print last added value to set
+        System.out.println(hs.iterator().next());
         hs.add(null);
         hs.add(null);
         System.out.println("\nAfter adding null values \n\n" + hs);
+        // print last added value to set
+        System.out.println(hs.iterator().next());
 
         Map<Integer, String> hm = new HashMap<>();
         hm.put(12, "John");
