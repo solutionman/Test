@@ -4,6 +4,10 @@ import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
+
+        SomeClass someClass = new SomeClass();
+        SomeClass someClass2 = new SomeClass(1, "hello");
+
 //        System.out.println("hello");
         String numbers = "12а3";
         Integer sum = calculateSum(numbers);
