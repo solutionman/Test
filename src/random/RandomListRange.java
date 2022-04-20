@@ -5,18 +5,17 @@ import java.util.List;
 import java.util.Random;
 
 public class RandomListRange {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         List<String> randomNumbers = new ArrayList<>();
         randomNumbers = generateNumberByLength(1, 16, 10);
         for (String num : randomNumbers) {
             System.out.println(num);
         }
         System.out.println("!!!!! next numbers !!!!!");
-        randomNumbers = generateNumberByLength(17, 25, 10);
+        randomNumbers = generateIncorrectNumbers(1, 16, 100);
         for (String num : randomNumbers) {
             System.out.println(num);
         }
-
     }
 
     private static List<String> generateNumberByLength(int from, int to, int amount) {
@@ -34,5 +33,21 @@ public class RandomListRange {
             generatedString.add(num);
         }
         return generatedString;
+    }
+
+    private static List<String> generateIncorrectNumbers(int from, int to, int amount) {
+        List<String> correctNumbers = generateNumberByLength(from, to, amount);
+        List<String> incorrectNumbers = new ArrayList<>();
+        final String alphabet = "{*}][!%$@";
+        final int N = alphabet.length();
+        Random rd = new Random();
+        System.out.println(alphabet.charAt(rd.nextInt(N)));
+        for (String number : correctNumbers) {
+            char[] toChange = number.toCharArray();
+            int place = rd.nextInt(toChange.length);
+            toChange[place] = alphabet.charAt(rd.nextInt(N));
+            incorrectNumbers.add(String.valueOf(toChange));
+        }
+        return incorrectNumbers;
     }
 }
