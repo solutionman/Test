@@ -9,12 +9,19 @@ public class RandomListRange {
         List<String> randomNumbers = new ArrayList<>();
         randomNumbers = generateNumberByLength(1, 16, 10);
         for (String num : randomNumbers) {
-            System.out.println(num);
+//            System.out.println(num);
         }
         System.out.println("!!!!! next numbers !!!!!");
         randomNumbers = generateIncorrectNumbers(1, 16, 100);
         for (String num : randomNumbers) {
-            System.out.println(num);
+//            System.out.println(num);
+            System.out.println("\"" + num + "\",");
+        }
+
+        System.out.println("!!!!! next numbers !!!!!");
+        randomNumbers = generateNumbers(1, 16, 100);
+        for (String num : randomNumbers) {
+//            System.out.println("\"" + num + "\",");
         }
     }
 
@@ -49,5 +56,23 @@ public class RandomListRange {
             incorrectNumbers.add(String.valueOf(toChange));
         }
         return incorrectNumbers;
+    }
+
+    private static List<String> generateNumbers(int from, int to, int amount) {
+        int leftLimit = '('; // symbol (
+        int rightLimit = 'z'; // letter 'z'
+        List<String> generatedString = new ArrayList<>();
+        Random random = new Random();
+        for (int i = 1; i < amount; i++) {
+            int length = random.nextInt(to - from + 1) + from;
+            // фильтруем значения из таблицы ASCII
+            String num = random.ints(leftLimit, rightLimit + 1)
+                    .filter(n -> (n <= ':' || n >= '?') && n != '@' && n != '*' && (n <= 'Z' || n >= 'a') && n != '-' && n != '/')
+                    .limit(length)
+                    .collect(StringBuilder::new, StringBuilder::appendCodePoint, StringBuilder::append)
+                    .toString();
+            generatedString.add(num);
+        }
+        return generatedString;
     }
 }
