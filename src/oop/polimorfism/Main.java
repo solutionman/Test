@@ -1,7 +1,20 @@
 package oop.polimorfism;
 
 public class Main {
-    public static void main(String[] args){
-        // TODO abstract class and interface
+    public static void main(String[] args) {
+
+        Phone deskPhone = new DeskPhone();
+        deskPhone.setName("desktop phone");
+        deskPhone.call();
+        deskPhone.ring();
+
+        Connection connection = new ConnectionImpl();
+
+        CellPhone cellPhone = new CellPhone(connection);
+        cellPhone.setName("cell");
+        cellPhone.ring();
+        cellPhone.call();
+        cellPhone.connectToInet();
+
     }
 }
