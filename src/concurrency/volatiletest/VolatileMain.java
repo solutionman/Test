@@ -17,6 +17,7 @@ public class VolatileMain {
             threads[i].start();
         }
 
+        // wait all threads (to die)
         for (int i = 0; i < NUMBER_OF_THREADS; ++i) {
             threads[i].join();
         }
