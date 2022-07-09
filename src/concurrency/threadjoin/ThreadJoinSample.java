@@ -1,7 +1,7 @@
 package concurrency.threadjoin;
 
 class ThreadJoinSample extends Thread {
-    public int counting = 0;
+    private int counting;
 
     ThreadJoinSample(int counting) {
         this.counting = counting;
