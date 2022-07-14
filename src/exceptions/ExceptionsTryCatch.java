@@ -3,6 +3,7 @@ package exceptions;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.Arrays;
 
 public class ExceptionsTryCatch {
     public static void main(String[] args) {
@@ -47,5 +48,13 @@ public class ExceptionsTryCatch {
         } catch (ArrayIndexOutOfBoundsException e){
             System.out.println(e);
         }
+
+        String catchNullPointer = null;
+        try{
+            catchNullPointer.toString();
+        } catch (NullPointerException npe){
+            System.out.println(npe);
+        }
+
     }
 }
