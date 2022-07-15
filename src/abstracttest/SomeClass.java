@@ -9,7 +9,7 @@ public class SomeClass extends AbstractExample {
     }
 
     {
-        this.number = super.calculateSomeNumber(3);
+        this.number = (int) super.calculateSomeNumber(3L);
         System.out.println("Non static initializer");
     }
 
@@ -18,8 +18,8 @@ public class SomeClass extends AbstractExample {
     }
 
     @Override
-    void calculateId(int id) {
+    void calculateId(int idd) {
         // some logic here
-        System.out.println(id * 2);
+        System.out.println(idd * 2);
     }
 }

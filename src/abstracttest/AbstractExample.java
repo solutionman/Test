@@ -1,9 +1,10 @@
 package abstracttest;
 
 public abstract class AbstractExample {
-    private int id;
+    private long id;
     abstract void calculateId(int id);
-    int calculateSomeNumber(int input){
-        return input * 3;
+    protected long calculateSomeNumber(long input){
+        this.id = input;
+        return id * 3L;
     }
 }
