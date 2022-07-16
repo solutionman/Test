@@ -1,10 +1,11 @@
 package anonymousclass;
 
 public class Main {
-    public static void main (String[] args){
+    public static void main(String[] args) {
         SomeInterface anonymousClass = new SomeInterface() {
             private int id;
             private String name;
+
             @Override
             public void createSomeCoolClass() {
                 this.id = 1;
@@ -12,7 +13,6 @@ public class Main {
 
             {
                 this.name = "reallyCoolClass";
-
             }
 
         };
