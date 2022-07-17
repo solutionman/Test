@@ -1,4 +1,5 @@
 package finalizetest;
+import java.lang.ref.*; // Finalizer FinalizerThread
 
 public class A {
     public String name;
