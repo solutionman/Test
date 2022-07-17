@@ -2,7 +2,7 @@ package casting;
 
 public class CastingTest {
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
 
         int a = 1;
         long b = a;
