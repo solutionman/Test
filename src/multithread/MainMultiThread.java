@@ -1,7 +1,7 @@
 package multithread;
 
 public class MainMultiThread {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         System.out.println("Multithreading in Java");
         MyThread myThread = new MyThread();
         AnotherThread anotherThread = new AnotherThread();
@@ -17,21 +17,21 @@ public class MainMultiThread {
     }
 }
 
-class MyThread extends Thread{
+class MyThread extends Thread {
     @Override
-    public void run(){
-        for(int i = 0; i < 1000; i++){
+    public void run() {
+        for (int i = 0; i < 1000; i++) {
             System.out.println("1 MyThread thread message " + i);
         }
     }
 }
 
-class AnotherThread extends Thread{
+class AnotherThread extends Thread {
     @Override
-    public void run(){
-        for(int i = 0; i < 1000; i++){
+    public void run() {
+        for (int i = 0; i < 1000; i++) {
             System.out.println("2 Another thread message " + i);
-            if(i == 800){
+            if (i == 800) {
                 try {
                     sleep(3000);
                 } catch (InterruptedException e) {
@@ -42,10 +42,10 @@ class AnotherThread extends Thread{
     }
 }
 
-class Runner implements Runnable{
+class Runner implements Runnable {
     @Override
     public void run() {
-        for(int i = 0; i < 1000; i++){
+        for (int i = 0; i < 1000; i++) {
             System.out.println("3 Runner thread message " + i);
         }
     }
