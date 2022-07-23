@@ -15,8 +15,8 @@ public class HashMapTest {
 
         // sorting map with streams
         map.entrySet().stream()
-//                .sorted(Map.Entry.comparingByKey())
-                .sorted(Map.Entry.comparingByValue())
+                .sorted(Map.Entry.comparingByKey())
+//                .sorted(Map.Entry.comparingByValue())
                 .forEach(entry -> logger.info(entry.getValue()));
     }
 }

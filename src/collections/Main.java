@@ -10,11 +10,12 @@ public class Main {
         hs.add("John");
         hs.add("Smith");
         hs.add("Peter");
-        System.out.println("Before adding duplicate values \n\n" + hs);
+        System.out.println("Before adding duplicate values \n" + hs);
         hs.add("John");
         hs.add("Smith");
-        System.out.println("\nAfter adding duplicate values \n\n" + hs);
+        System.out.println("\nAfter adding duplicate values \n" + hs);
         // print last added value to set
+        System.out.println("Last added value to Set: ");
         System.out.println(hs.iterator().next());
         hs.add(null);
         hs.add(null);
