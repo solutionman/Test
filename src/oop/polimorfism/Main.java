@@ -10,11 +10,10 @@ public class Main {
 
         Connection connection = new ConnectionImpl();
 
-        CellPhone cellPhone = new CellPhone(connection);
+        Phone cellPhone = new CellPhone(connection);
         cellPhone.setName("cell");
         cellPhone.ring();
         cellPhone.call();
-        cellPhone.connectToInet();
 
     }
 }
