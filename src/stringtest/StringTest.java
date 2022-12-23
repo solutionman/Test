@@ -10,5 +10,10 @@ public class StringTest {
         String another =  string.intern();
         System.out.println(another);
 
+        System.out.println(concatWithoutFirst("dhe", "fllo"));
+
+    }
+    static String concatWithoutFirst(String first, String second){
+        return first.substring(1) + second.substring(1);
     }
 }
